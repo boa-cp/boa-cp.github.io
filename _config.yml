@@ -6,14 +6,11 @@
 # 'jekyll serve'. If you change this file, please restart the server process.
 
 # Site settings
-title: BOA-Computational Physics Platform
-logo: "/pics/boa2XS.png"
+title: BOA-Computing
+logo: "/pics/boa2CS.png"
 email: boa.cp.ltd@gmail.com
-description: > # this means to ignore newlines until "baseurl:"
-  How to combine high performance of GPU or CPU parallelization with python programing convenience and flexibility and apply them to computational physics? 
-  The answer is BOA.
-  BOA is python module for computation physics. The Python hood covers engine providing OpenCL realization of numerous numerical techniques for solution of partial
-  differential equations. The techniques mainly targeted to solve partial differential equations for physical processes.
+description: Multidisciplinary medical-oriented R&D service
+keywords: "Software Engineering, Mathematics, Physics, Programming, Machine-Learning, Artificial Intelligence, Statistics, Probability, Algorithms, Numerical methods"
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://boa.co.il" # the base hostname & protocol for your site
 twitter_username: jekyllrb

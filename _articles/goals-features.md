@@ -14,3 +14,22 @@ with intuitive interface
 * Program state loging
 * Use of all availible computational resorces
 * Automatic code documentation readable for non-expirience users
+* Work with pysical units
+
+### Self documnting program
+
+
+### Program state loging
+
+First of all BOA is a python module. Sure it is convinient 
+to test directly several commands and to see the result. 
+The problem is that in case of success the command hystory 
+in not always availible.
+We made a try to resolve this problem. Namely, all BOA commands
+can be saved: 
+{% highlight python %}
+boa.saveState("recent-work.py")
+{% endhighlight %}
+
+...
+
