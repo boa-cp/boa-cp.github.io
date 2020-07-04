@@ -12,9 +12,9 @@ email: boa.cp.ltd@gmail.com
 description: Multidisciplinary medical-oriented R&D service
 keywords: "Software Engineering, Mathematics, Physics, Programming, Machine-Learning, Artificial Intelligence, Statistics, Probability, Algorithms, Numerical methods"
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://boa.co.il" # the base hostname & protocol for your site
-twitter_username: jekyllrb
-github_username:  jekyll
+url: "https://boa-cp.github.io" # the base hostname & protocol for your site
+#twitter_username: b
+github_username:  boa-cp
 
 # Build settings
 markdown: kramdown
