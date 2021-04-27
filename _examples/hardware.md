@@ -7,7 +7,7 @@ categories: examples
 
 Here is a simple program demonstrating different capabilities of the computing hardware monitoring. 
 
-{% highlight python %}
+{% highlight python linenos %}
 import boa
 
 
