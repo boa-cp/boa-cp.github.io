@@ -84,8 +84,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1"
-     inkscape:cx="662.50874"
-     inkscape:cy="214.32465"
+     inkscape:cx="484.00874"
+     inkscape:cy="212.32465"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -885,7 +885,7 @@
       </g>
     </g>
     <rect
-       style="fill:#fefefe;fill-opacity:0.78431373;stroke:#646464;stroke-width:0.24280833;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.57819902"
+       style="fill:#fefefe;fill-opacity:0.78431373;stroke:none;stroke-width:0.24280833;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.57819902"
        id="rect1229"
        width="334.98468"
        height="99.505524"
