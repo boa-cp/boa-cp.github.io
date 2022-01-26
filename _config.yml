@@ -7,7 +7,8 @@
 
 # Site settings
 title: BOA-Computing
-logo: "/pics/boa3CS.png"
+logo: "/pics/boa3COptimized.svg"
+#logo: "/pics/boa3CS.png"
 email: boa.cp.ltd@gmail.com
 description: Multidisciplinary medical-oriented R&D service and tools
 keywords: "Software Engineering, Mathematics, Physics, Programming, Machine-Learning, Artificial Intelligence, Statistics, Probability, Algorithms, Numerical methods"
