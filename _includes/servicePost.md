@@ -1,5 +1,5 @@
 ![Service](/pics/drawingS.png)
-# Services
+# Algorithm development services
 
 We provide a full range of services in the field of __numerical algorithms__. Starting
 from __algorithm formulation__ and ending with its __implementation and support__. 
