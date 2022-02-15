@@ -25,4 +25,15 @@
 
     gtag('config', 'UA-220281238-1');
   </script>
+
+  <script>
+    window.addEventListener('load',function(){
+  	document.querySelectorAll('[href*="mailto:"]').forEach(function(email){
+  		  email.onclick = function(){
+  		    gtag('event','click',{'event_category':'email','event_label':'submit'})
+  		  }
+  		})
+  
+  	  })
+  </script>
 </head>
