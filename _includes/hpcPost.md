@@ -1,4 +1,4 @@
-![HPC](/pics/boaHPCSevice.png) 
+[![HPC](/pics/boaHPCSevice.png)]({% post_url 2022-02-01-hpc %})
 
 # HPC algorithm development expertise 
 

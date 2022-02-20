@@ -29,14 +29,14 @@
 }
 
 .site-title-d {
-    font-size: 22px;
+    font-size: 25px;
     font-weight: bold;
     line-height: 56px;
     letter-spacing: -1px;
     margin-bottom: 0;
     float: left;
     color: $grey-color;
-    font-size: 150%;
+    width: calc(100% - 300)
 }
 
 
@@ -49,7 +49,9 @@
     }
 
     .page-link {
-        color: $text-color;
+        font-size: 22px;
+	    font-weight: bold;
+	    color: #049000;
         line-height: $base-line-height;
 
         // Gaps between nav items, but not on the last one
@@ -58,53 +60,12 @@
         }
     }
 
-    @include media-query($on-palm) {
-        position: absolute;
-        top: 9px;
-        right: $spacing-unit / 2;
-        background-color: $background-color;
-        border: 0px solid $grey-color-light;
-        border-radius: 5px;
+
+    .trigger {
+        clear: both;
+        padding-top: 4em;
         text-align: right;
-
-        .menu-icon {
-            display: block;
-            float: right;
-            width: 36px;
-            height: 26px;
-            line-height: 0;
-            padding-top: 10px;
-            text-align: center;
-
-            > svg {
-                width: 18px;
-                height: 15px;
-
-                path {
-                    fill: $grey-color-dark;
-                }
-            }
-        }
-
-        .trigger {
-            clear: both;
-            display: none;
-        }
-
-        &:hover .trigger {
-            display: block;
-            padding-bottom: 5px;
-        }
-
-        .page-link {
-            display: block;
-            padding: 5px 10px;
-
-            &:not(:last-child) {
-                margin-right: 0;
-            }
-            margin-left: 20px;
-        }
+        width: 100%
     }
 }
 

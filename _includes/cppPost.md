@@ -1,4 +1,4 @@
-![mess](/pics/drawingPB2.png) 
+[![CP](/pics/drawingPB2.png)]({% post_url 2021-05-19-Computation-Platform %})
 
 # Computation Platform
 

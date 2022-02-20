@@ -1,4 +1,4 @@
-![Service](/pics/drawingS.png)
+[![Service](/pics/drawingS.png)]({% post_url 2021-05-19-Services %})
 # Algorithm development services
 
 We provide a full range of services in the field of __numerical algorithms__. Starting
