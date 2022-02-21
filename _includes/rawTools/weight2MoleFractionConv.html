@@ -1,0 +1,226 @@
+<html>
+<head>
+<style>
+label{ display:inline-block; font:1.em sans-serif; text-align:left;}
+.parameters_list{ margin:2px; width:350px; padding:1em; border:1px solid #CCC; height:85vh; overflow-y:scroll;}
+.control{ margin:0 2px; width:350px; padding:2px 1em; border:1px solid #CCC;}
+input{ font:1em sans-serif; width:100px; box-sizing:border-box; border:1px solid #999; background-color:#AFA;}
+input:read-only{ font:1em sans-serif; width:100px; box-sizing:border-box; border:1px solid #999; background-color:#DFD; color:#333;}
+.tooltip{ position:relative; margin-bottom:0.3em;}
+.tooltip .tooltiptext{ visibility:hidden; width:calc(350px-20); background-color:#ccc; text-align:justify; position:absolute; z-index:4; top:110%; border-radius:6px; padding:5px 5px; margin-left:5px; font:0.8em sans-serif;}
+.tooltip:hover .tooltiptext{ visibility:visible;}
+button{ font:1.2em sans-serif; border:0px solid #999; background-color:#8D8; padding:5px 10px; border-radius:8px;}
+button:hover{ background-color:#6B6;}
+.pl_h1{ font:1.5em sans-serif; border:0px solid #999; background-color:#6A6; padding:2px; margin-bottom:1em; width:100%;}
+.ps_sep{ font:1.2em sans-serif; border:0px solid #999; background-color:#8D8; padding:2px; margin-top:0.3em; margin-bottom:0.3em; width:100%;}
+</style>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6">
+</script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+<script>
+	let M1=18;
+	let e_M1;
+	let M2=18;
+	let e_M2;
+	let M3=18;
+	let e_M3;
+	let M4=18;
+	let e_M4;
+	let x1=0.25;
+	let e_x1;
+	let x2=0.25;
+	let e_x2;
+	let x3=0.25;
+	let e_x3;
+	let x4=0.25;
+	let e_x4;
+	let y1;
+	let e_y1;
+	let y2;
+	let e_y2;
+	let y3;
+	let e_y3;
+	let y4;
+	let e_y4;
+function exp(x){	return Math.exp(x);
+}
+function log(x){	return Math.log(x);
+}
+window.onload =function (){	e_M1= document.getElementById("M1");
+	e_M2= document.getElementById("M2");
+	e_M3= document.getElementById("M3");
+	e_M4= document.getElementById("M4");
+	e_x1= document.getElementById("x1");
+	e_x2= document.getElementById("x2");
+	e_x3= document.getElementById("x3");
+	e_x4= document.getElementById("x4");
+	e_y1= document.getElementById("y1");
+	e_y2= document.getElementById("y2");
+	e_y3= document.getElementById("y3");
+	e_y4= document.getElementById("y4");
+	y1=x1 / (M1 * (x1 / M1 + x2 / M2 + x3 / M3 + x4 / M4));
+	e_y1.value=y1.toPrecision(6);
+	y2=x2 / (M2 * (x1 / M1 + x2 / M2 + x3 / M3 + x4 / M4));
+	e_y2.value=y2.toPrecision(6);
+	y3=x3 / (M3 * (x1 / M1 + x2 / M2 + x3 / M3 + x4 / M4));
+	e_y3.value=y3.toPrecision(6);
+	y4=x4 / (M4 * (x1 / M1 + x2 / M2 + x3 / M3 + x4 / M4));
+	e_y4.value=y4.toPrecision(6);
+}
+function reset_p(){	e_M1.value=M1;
+	e_M2.value=M2;
+	e_M3.value=M3;
+	e_M4.value=M4;
+	e_x1.value=x1;
+	e_x2.value=x2;
+	e_x3.value=x3;
+	e_x4.value=x4;
+	e_y1.value=y1;
+	e_y2.value=y2;
+	e_y3.value=y3;
+	e_y4.value=y4;
+}
+function update_p(){	M1=parseFloat(e_M1.value);
+	M2=parseFloat(e_M2.value);
+	M3=parseFloat(e_M3.value);
+	M4=parseFloat(e_M4.value);
+	x1=parseFloat(e_x1.value);
+	x2=parseFloat(e_x2.value);
+	x3=parseFloat(e_x3.value);
+	x4=parseFloat(e_x4.value);
+	y1=x1 / (M1 * (x1 / M1 + x2 / M2 + x3 / M3 + x4 / M4));
+	e_y1.value=y1.toPrecision(6);
+	y2=x2 / (M2 * (x1 / M1 + x2 / M2 + x3 / M3 + x4 / M4));
+	e_y2.value=y2.toPrecision(6);
+	y3=x3 / (M3 * (x1 / M1 + x2 / M2 + x3 / M3 + x4 / M4));
+	e_y3.value=y3.toPrecision(6);
+	y4=x4 / (M4 * (x1 / M1 + x2 / M2 + x3 / M3 + x4 / M4));
+	e_y4.value=y4.toPrecision(6);
+}
+</script>
+</head>
+<body>
+<div class="parameters_list">
+<div class="pl_h1">
+	Weight- to mole-fraction converter
+</div>
+<div class="tooltip">
+<span class="tooltiptext">
+	Molar weight of the component 1
+</span>
+<label for="M1">
+	\(M_1\)
+</label>
+<input type="number" id="M1" value="18">
+</div>
+<div class="tooltip">
+<span class="tooltiptext">
+	Molar weight of the component 2
+</span>
+<label for="M2">
+	\(M_2\)
+</label>
+<input type="number" id="M2" value="18">
+</div>
+<div class="tooltip">
+<span class="tooltiptext">
+	Molar weight of the component 3
+</span>
+<label for="M3">
+	\(M_3\)
+</label>
+<input type="number" id="M3" value="18">
+</div>
+<div class="tooltip">
+<span class="tooltiptext">
+	Molar weight of the component 3
+</span>
+<label for="M4">
+	\(M_4\)
+</label>
+<input type="number" id="M4" value="18">
+</div>
+<div class="tooltip">
+<span class="tooltiptext">
+	weight fraction of component 1
+</span>
+<label for="x1">
+	\(x_1\)
+</label>
+<input type="number" id="x1" value="0.25">
+</div>
+<div class="tooltip">
+<span class="tooltiptext">
+	weight fraction of component 2
+</span>
+<label for="x2">
+	\(x_2\)
+</label>
+<input type="number" id="x2" value="0.25">
+</div>
+<div class="tooltip">
+<span class="tooltiptext">
+	weight fraction of component 3
+</span>
+<label for="x3">
+	\(x_3\)
+</label>
+<input type="number" id="x3" value="0.25">
+</div>
+<div class="tooltip">
+<span class="tooltiptext">
+	weight fraction of component 3
+</span>
+<label for="x4">
+	\(x_4\)
+</label>
+<input type="number" id="x4" value="0.25">
+</div>
+<div class="tooltip">
+<span class="tooltiptext">
+	mole fraction of component 1, \(\frac{x_1}{M_1\cdot \left(\frac{x_1}{M_1}+\frac{x_2}{M_2}+\frac{x_3}{M_3}+\frac{x_4}{M_4}\right)}\)
+</span>
+<label for="y1">
+	\(y_1\)
+</label>
+<input type="text" id="y1" value="0.25" readonly="readonly">
+</div>
+<div class="tooltip">
+<span class="tooltiptext">
+	mole fraction of component 2, \(\frac{x_2}{M_2\cdot \left(\frac{x_1}{M_1}+\frac{x_2}{M_2}+\frac{x_3}{M_3}+\frac{x_4}{M_4}\right)}\)
+</span>
+<label for="y2">
+	\(y_2\)
+</label>
+<input type="text" id="y2" value="0.25" readonly="readonly">
+</div>
+<div class="tooltip">
+<span class="tooltiptext">
+	mole fraction of component 3, \(\frac{x_3}{M_3\cdot \left(\frac{x_1}{M_1}+\frac{x_2}{M_2}+\frac{x_3}{M_3}+\frac{x_4}{M_4}\right)}\)
+</span>
+<label for="y3">
+	\(y_3\)
+</label>
+<input type="text" id="y3" value="0.25" readonly="readonly">
+</div>
+<div class="tooltip">
+<span class="tooltiptext">
+	mole fraction of component 4, \(\frac{x_4}{M_4\cdot \left(\frac{x_1}{M_1}+\frac{x_2}{M_2}+\frac{x_3}{M_3}+\frac{x_4}{M_4}\right)}\)
+</span>
+<label for="y4">
+	\(y_4\)
+</label>
+<input type="text" id="y4" value="0.25" readonly="readonly">
+</div>
+</div>
+<div class="control">
+<button type="button" id="inp_reset" style="width:30%" onclick="reset_p()">
+	Reset
+</button>
+<button type="button" id="inp_update" style="width:65%" onclick="update_p()">
+	Update
+</button>
+</div>
+</body>
+</html>
