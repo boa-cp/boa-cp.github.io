@@ -20,4 +20,16 @@ layout: null
       <priority>0.5</priority>
     </url>
   {% endfor %}
+  
+  {% for a in site.pages %}
+    {% if a.title %}
+      <url>
+        <loc>{{a.url | prepend: site.baseurl}}</loc>
+        <lastmod>{{a.date|date_to_xmlschema}}</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+      </url>
+    {% endif %}
+  {% endfor %}
+ 
 </urlset>
