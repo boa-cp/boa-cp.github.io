@@ -25,7 +25,6 @@ layout: null
     {% if a.title %}
       <url>
         <loc>{{ site.url }}{{ a.url }}</loc>
-        <lastmod>{{a.date|date_to_xmlschema}}</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.5</priority>
       </url>
