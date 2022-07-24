@@ -23,4 +23,6 @@ markdown: kramdown
 collections:
   tools:
     output: true
+  gallery:
+    output: true
 

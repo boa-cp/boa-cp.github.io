@@ -3,13 +3,15 @@ layout: null
 ---
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  {% for a in site.tools %}
-   <url>
-      <loc>{{ site.url }}{{ a.url }}</loc>
-      <lastmod>{{ a.date | date_to_xmlschema }}</lastmod>
-      <changefreq>monthly</changefreq>
-      <priority>0.5</priority>
-   </url>
+
+  {% for a in site.pages %}
+    {% if a.title %}
+      <url>
+        <loc>{{ site.url }}{{ a.url }}</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+      </url>
+    {% endif %}
   {% endfor %}
 
   {% for post in site.posts %}
@@ -20,15 +22,26 @@ layout: null
       <priority>0.5</priority>
     </url>
   {% endfor %}
-  
-  {% for a in site.pages %}
-    {% if a.title %}
-      <url>
-        <loc>{{ site.url }}{{ a.url }}</loc>
-        <changefreq>monthly</changefreq>
-        <priority>0.5</priority>
-      </url>
-    {% endif %}
+
+  {% for a in site.gallery %}
+   <url>
+      <loc>{{ site.url }}{{ a.url }}</loc>
+      <lastmod>{{ a.date | date_to_xmlschema }}</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.5</priority>
+   </url>
   {% endfor %}
+
+
+  {% for a in site.tools %}
+   <url>
+      <loc>{{ site.url }}{{ a.url }}</loc>
+      <lastmod>{{ a.date | date_to_xmlschema }}</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.5</priority>
+   </url>
+  {% endfor %}
+
+  
  
 </urlset>
